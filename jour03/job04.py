@@ -14,19 +14,38 @@ class Joueur:
     def setid(self, value):
         self.id = value
 
+    def setname(self, value):
+        self.name = value
+
     def getposition(self):
         return self.position
 
+    def setposition(self, value):
+        self.position = value
+
     def getgoals(self):
         return self.goals
+
+    def setgoals(self, value):
+        self.goals = value
+
     def getpasses(self):
         return self.passes
+
+    def setpasses(self, value):
+        self.passes = value
 
     def getycards(self):
         return self.yellowcards
 
+    def setycards(self, value):
+        self.yellowcards = value
+
     def getrcards(self):
         return self.redcards
+
+    def setrcards(self, value):
+        self.redcards = value
 
     def marquerUnBut(self):
         self.goals += 1
@@ -58,10 +77,10 @@ class Equipe:
                   f"{self.listejoueurs[e].getycards()}{self.listejoueurs[e].getrcards()}")
 
     def mettreAJourStatistiquesJoueurs(self, id):
-        self.listejoueurs[id].setid()
-        self.listejoueurs[id].setid()
-        self.listejoueurs[id].setid()
-        self.listejoueurs[id].setid()
-        self.listejoueurs[id].setid()
-        self.listejoueurs[id].setid()
-        self.listejoueurs[id].setid()
+        self.listejoueurs[id].setid(input("Numéro: "))
+        self.listejoueurs[id].setgoals(input("Buts: "))
+        self.listejoueurs[id].setpasses(input("Passes: "))
+        self.listejoueurs[id].setycards(input("Cartons jaunes: "))
+        self.listejoueurs[id].setrcards(input("Cartons rouges: "))
+        self.listejoueurs[id].setposition(input("Position: "))
+        self.listejoueurs[id].setname(input("Nom: "))
